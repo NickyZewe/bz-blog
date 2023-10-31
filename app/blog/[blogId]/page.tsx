@@ -1,5 +1,5 @@
 import { pb, pocketBaseURL } from "@/entities/pocketBase";
-import { Image } from "@chakra-ui/react";
+import Image from "next/image";
 import Link from "next/link";
 
 interface PageProps {
@@ -23,7 +23,9 @@ const Page: React.FC<PageProps> = async ({
       <div className="relative w-96 h-96 overflow-hidden rounded-lg mt-5">
         <Image
           src={`${pocketBaseURL}/api/files/${blog.collectionId}/${blog.id}/${blog.headerImage}`}
-          alt=""
+          alt="image"
+          className="rounded-t-lg"
+          fill
           objectFit="cover"
         />
       </div>

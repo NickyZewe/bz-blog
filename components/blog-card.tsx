@@ -1,6 +1,6 @@
-import { Image } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 interface BlogCardProps {
   title: string;
@@ -19,16 +19,15 @@ const BlogCard: React.FC<BlogCardProps> = ({
 }) => {
   const shortDescription = description.substring(0, 150) + "...";
   return (
-    <div className="rounded-lg shadow-md p-4 mb-4 overflow-hidden border border-gray-600 cursor-pointer ">
+    <div className="rounded-lg shadow-md p-4 mb-4 overflow-hidden border border-gray-600 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105  duration-300">
       <Link href={`/blog/${id}`}>
-        <div className="relative " style={{ paddingBottom: "10%" }}>
+        <div className="relative w-full h-1" style={{ paddingBottom: "100%" }}>
           <Image
             src={`${headerImage}`}
             alt="image"
-            fit="cover"
             className="rounded-t-lg"
-            height="200px"
-            width="100%"
+            fill
+            objectFit="cover"
           />
         </div>
         <div className="p-2">
