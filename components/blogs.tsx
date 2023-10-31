@@ -16,6 +16,7 @@ const Blogs = () => {
             description={blog.description}
             headerImage={`${url}/api/files/${blog.collectionId}/${blog.id}/${blog.headerImage}`}
             id={blog.id}
+            author={blog.author}
           />
         ))}
     </div>

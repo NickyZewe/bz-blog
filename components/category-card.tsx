@@ -1,5 +1,3 @@
-"use client";
-
 interface CategoryCardProps {
   title: string;
   id: string;
