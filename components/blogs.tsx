@@ -1,8 +1,10 @@
 import { FetchBlogs } from "@/actions/fetch-blogs";
 import BlogCard from "./blog-card";
+import { pocketBaseURL } from "@/entities/pocketBase";
 
 const Blogs = () => {
   const blogs = FetchBlogs();
+  const url = pocketBaseURL;
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -12,9 +14,7 @@ const Blogs = () => {
             key={blog.id}
             title={blog.title}
             description={blog.description}
-            headerImage={
-              "http://127.0.0.1:8090/api/files/nxdyygkfkn4pi39/uk6ow7n9vi95smq/381721838_2029828914042892_4840172428797796281_n_9s9BIEtuKZ.jpg?token="
-            }
+            headerImage={`${url}/api/files/${blog.collectionId}/${blog.id}/${blog.headerImage}`}
             id={blog.id}
           />
         ))}
