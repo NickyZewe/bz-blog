@@ -1,6 +1,4 @@
-import Gallery from "@/components/gallery/gallery";
 import { pb, pocketBaseURL } from "@/entities/pocketBase";
-import { Tab } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -22,12 +20,13 @@ const Page: React.FC<PageProps> = async ({
   return (
     <div className="max-w-3xl mx-auto-p-4">
       <Link href={"/"}>{" < Back "}</Link>
-      <div className="relative w-96 h-96 overflow-hidden rounded-lg mt-5">
+      <div className="relative  h-96 overflow-hidden rounded-lg mt-5">
         <Image
           src={`${pocketBaseURL}/api/files/${blog.collectionId}/${blog.id}/${blog.headerImage}`}
           alt="image"
           priority
           layout="fill"
+          objectFit="cover"
         />
       </div>
       <div className="flex flex-col-reverse">

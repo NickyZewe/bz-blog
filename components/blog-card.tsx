@@ -20,15 +20,15 @@ const BlogCard: React.FC<BlogCardProps> = ({
   const shortDescription = description.substring(0, 150) + "...";
 
   return (
-    <div className="rounded-lg shadow-md p-4 mb-4 overflow-hidden border border-gray-600 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105  duration-300">
+    <div className="rounded-lg shadow-md p-4 mb-4 overflow-hidden border border-gray-600 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105  duration-300 ">
       <Link href={`/blog/${id}`}>
         <div className="relative w-full h-1" style={{ paddingBottom: "100%" }}>
           <Image
             src={`${headerImage}`}
             alt="image"
             className="rounded-t-lg"
-            fill
-            objectFit="cover"
+            layout="fill"
+            objectFit="scale-down"
           />
         </div>
         <div className="p-2">
