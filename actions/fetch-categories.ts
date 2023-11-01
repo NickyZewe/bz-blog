@@ -7,7 +7,7 @@ export function FetchCategories () {
     const fetchCategories = async () => {
         try {
             const categories = await pb.collection('category').getFullList({
-                sort: '-created',
+                sort: '+title',
             });
             setCategories(categories);
         } catch (error) {

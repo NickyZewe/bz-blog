@@ -10,3 +10,14 @@ export interface BlogProps {
   created: string;
   updated: string;
 }
+
+
+export interface CategoryCardProps {
+  title: string;
+  id: string;
+  blogs?: string[];
+  collectionId?: string;
+  collectionName?: string;
+  created?: string;
+  updated?: string;
+}

@@ -8,7 +8,7 @@ export function FetchBlogs () {
     const fetchBlogs = async () => {
       try {
         const response = await pb.collection("blogs").getFullList({
-          sort: "-created",
+          sort: "created",
         });
         setBlogs(response);
       } catch (error) {

@@ -1,13 +1,16 @@
-interface CategoryCardProps {
-  title: string;
-  id: string;
-}
+import { CategoryContext } from "@/context/category-context";
+import { CategoryCardProps } from "@/entities/types";
+import { useContext } from "react";
 
 const CategoryCard: React.FC<CategoryCardProps> = ({ title }) => {
+  const { category, changeCategory } = useContext(CategoryContext);
+
   return (
     <div
-      onClick={() => {}}
-      className="p-4 rounded-lg shadow-md cursor-pointer bg-[#af8533]"
+      onClick={() => changeCategory(title)}
+      className={`${
+        title === category ? "bg-[#ffffff] text-black" : "bg-[#af8533]"
+      } p-4 rounded-lg shadow-md cursor-pointer`}
     >
       {title}
     </div>

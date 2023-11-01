@@ -54,7 +54,9 @@ const Page: React.FC<PageProps> = async ({
         </h2>
 
         <div className="mt-4 flex items-center text-gray-400">
-          <span className="text-sm">Published on {blog.created}</span>
+          <span className="text-sm">
+            Published on {new Date(blog.created).toLocaleString()}
+          </span>
         </div>
         <div>
           <div

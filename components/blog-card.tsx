@@ -18,6 +18,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
   author,
 }) => {
   const shortDescription = description.substring(0, 150) + "...";
+
   return (
     <div className="rounded-lg shadow-md p-4 mb-4 overflow-hidden border border-gray-600 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105  duration-300">
       <Link href={`/blog/${id}`}>
