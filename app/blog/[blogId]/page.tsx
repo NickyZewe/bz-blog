@@ -1,4 +1,6 @@
+import Gallery from "@/components/gallery/gallery";
 import { pb, pocketBaseURL } from "@/entities/pocketBase";
+import { Tab } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,10 +26,26 @@ const Page: React.FC<PageProps> = async ({
         <Image
           src={`${pocketBaseURL}/api/files/${blog.collectionId}/${blog.id}/${blog.headerImage}`}
           alt="image"
-          className="rounded-t-lg"
-          fill
-          objectFit="cover"
+          priority
+          layout="fill"
         />
+      </div>
+      <div className="flex flex-col-reverse">
+        <div className="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none">
+          <div className="grid grid-cols-4 gap-6">
+            {blog.images &&
+              blog.images.map((image: string) => (
+                <Image
+                  src={`${pocketBaseURL}/api/files/${blog.collectionId}/${blog.id}/${image}`}
+                  alt="image"
+                  width={300}
+                  height={300}
+                  key={image}
+                  className="cursor-pointer transform rounded-lg brightness-90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105  duration-300"
+                />
+              ))}
+          </div>
+        </div>
       </div>
       <div className="mt-4">
         <h1 className="text-3xl font-semibold "> {blog.title} </h1>
