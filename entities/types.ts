@@ -9,6 +9,7 @@ export interface BlogProps {
   categories: string[];
   created: string;
   updated: string;
+  collectionId: string;
 }
 
 
@@ -20,4 +21,9 @@ export interface CategoryCardProps {
   collectionName?: string;
   created?: string;
   updated?: string;
+}
+
+export interface Image {
+  id: string;
+  
 }

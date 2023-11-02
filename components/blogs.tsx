@@ -1,9 +1,8 @@
 import { FetchBlogs } from "@/actions/fetch-blogs";
-import BlogCard from "./blog-card";
-import { pocketBaseURL } from "@/entities/pocketBase";
 import { CategoryContext } from "@/context/category-context";
+import { pocketBaseURL } from "@/entities/pocketBase";
 import { useContext } from "react";
-import { FetchCategories } from "@/actions/fetch-categories";
+import BlogCard from "./blog-card";
 
 const Blogs = () => {
   const blogs = FetchBlogs();
