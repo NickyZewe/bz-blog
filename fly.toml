@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for bz-blog on 2023-11-02T13:33:50-04:00
+# fly.toml app configuration file generated for bz-blog on 2023-11-02T15:55:13-04:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -6,11 +6,11 @@
 app = "bz-blog"
 primary_region = "iad"
 
-[mounts]
-  destination = "/pb/pb_data"
-  source = "pb_data"
-
 [build]
+
+[[mounts]]
+  source = "pb_data"
+  destination = "/pb/pb_data"
 
 [http_service]
   internal_port = 3000

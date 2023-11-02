@@ -1,5 +1,5 @@
 import PocketBase from "pocketbase";
 
-export const pb = new PocketBase("http://127.0.0.1:8090");
+export const pb = new PocketBase("https://bz-blog.fly.dev/");
 
-export const pocketBaseURL = `http://127.0.0.1:8090`;
+export const pocketBaseURL = `https://bz-blog.fly.dev/`;
