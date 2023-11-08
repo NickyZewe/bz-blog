@@ -10,7 +10,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ title }) => {
       onClick={() => changeCategory(title)}
       className={`${
         title === category ? "bg-[#ffffff] text-black" : "bg-[#af8533]"
-      } p-4 rounded-lg shadow-md cursor-pointer`}
+      } p-4 rounded-lg shadow-md cursor-pointer justify-center flex items-center`}
     >
       {title}
     </div>

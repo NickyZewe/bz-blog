@@ -15,7 +15,7 @@ const Categories = () => {
   }, []);
 
   return (
-    <div className="flex gap-6 mb-8 ">
+    <div className="flex flex-row gap-3 mb-8 p-5 ">
       {categories &&
         categories.map((category) => (
           <CategoryCard
