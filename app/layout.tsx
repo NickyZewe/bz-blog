@@ -18,9 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="mx-auto max-screen-lg">
+        <div className="mx-auto max-screen-lg bg-black">
           <CategoryProvider>
-            <div className="flex min-h screen flex-col items-center p-24">
+            <div className="flex min-h-screen  flex-col items-center p-24">
               {children}
             </div>
           </CategoryProvider>
