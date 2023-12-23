@@ -43,7 +43,7 @@ const Page: React.FC<PageProps> = async ({
         </div>
         <div>
           <div
-            className="mt-4 text-[#f0be5b]"
+            className="mt-4 text-white"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
         </div>
