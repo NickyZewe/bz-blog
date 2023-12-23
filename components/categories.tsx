@@ -1,8 +1,8 @@
 "use client";
 import { FetchCategories } from "@/actions/fetch-categories";
-import CategoryCard from "./category-card";
-import { useContext, useEffect, useLayoutEffect } from "react";
 import { CategoryContext } from "@/context/category-context";
+import { useContext, useEffect } from "react";
+import CategoryCard from "./category-card";
 
 const Categories = () => {
   const categories = FetchCategories();

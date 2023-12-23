@@ -1,7 +1,6 @@
-import Gallery, { GalleryProps } from "@/components/gallery/gallery";
-import { pb, pocketBaseURL } from "@/entities/pocketBase";
+import Gallery from "@/components/gallery/gallery";
+import { pb } from "@/entities/pocketBase";
 import { BlogProps } from "@/entities/types";
-import Image from "next/image";
 import Link from "next/link";
 
 interface PageProps {
@@ -18,7 +17,6 @@ const Page: React.FC<PageProps> = async ({
   };
 }) => {
   const blog: BlogProps = await pb.collection("blogs").getOne(params.blogId);
-  console.log(blog);
 
   return (
     <div className="max-w-3xl mx-auto-p-4 ">
