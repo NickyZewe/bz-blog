@@ -22,14 +22,17 @@ const Page: React.FC<PageProps> = async ({
 
   return (
     <div className="max-w-3xl mx-auto-p-4 ">
-      <Link href={"/"} className="p-4 pl-0 pb-10 ">
+      <Link href={"/"} className="p-4 pl-0 pb-10 text-[#f0be5b]">
         {" < Back "}
       </Link>
       <Gallery blog={blog} />
 
       <div className="mt-4">
-        <h1 className="text-3xl font-semibold "> {blog.title} </h1>
-        <h2 className="text-l font-semibold italic mb-2 overflow-ellipsis pt-4">
+        <h1 className="text-3xl font-semibold text-[#f0be5b] ">
+          {" "}
+          {blog.title}{" "}
+        </h1>
+        <h2 className="text-l font-semibold italic mb-2 overflow-ellipsis pt-4 text-[#f0be5b]">
           Author: {blog.author}
         </h2>
 
@@ -40,7 +43,7 @@ const Page: React.FC<PageProps> = async ({
         </div>
         <div>
           <div
-            className="mt-4"
+            className="mt-4 text-[#f0be5b]"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
         </div>

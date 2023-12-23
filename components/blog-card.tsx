@@ -32,13 +32,13 @@ const BlogCard: React.FC<BlogCardProps> = ({
           />
         </div>
         <div className="p-2">
-          <h2 className="text-xl font-semibold mb-2 overflow-ellipsis">
+          <h2 className="text-xl text-[#f0be5b] font-semibold mb-2 overflow-ellipsis">
             {title}
           </h2>
-          <h2 className="text-l font-semibold italic mb-2 overflow-ellipsis ">
+          <h2 className="text-l font-semibold italic mb-2 overflow-ellipsis text-[#f0be5b] ">
             Author: {author}
           </h2>
-          <p className="text-gray-600">{shortDescription}</p>
+          <p className="text-white">{shortDescription}</p>
         </div>
       </Link>
     </div>
